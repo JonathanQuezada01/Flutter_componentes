@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:componentes/styles/styles.dart';
+
 class ListView2Screen extends StatelessWidget {
   //Lista de texto que se le ingresara al ListView
   final options = const [
@@ -14,11 +16,11 @@ class ListView2Screen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          centerTitle: true,
-          title: const Text(
-            'listView2',
-          ),
-        ),
+            centerTitle: true,
+            title: const Text(
+              'listView2',
+            ),
+            backgroundColor: colorTema),
         body: ListView.separated(
             itemCount: options.length,
             separatorBuilder: (context, i) => const Divider(),
@@ -29,7 +31,10 @@ class ListView2Screen extends StatelessWidget {
               return ListTile(
                 title: Text(options[i]),
                 trailing: const Icon(Icons.arrow_forward),
-                onTap: () {},
+                selectedColor: colorTema,
+                onTap: () {
+                  print(options[i]);
+                },
               );
             }));
   }
