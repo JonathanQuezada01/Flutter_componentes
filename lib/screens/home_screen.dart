@@ -1,27 +1,36 @@
 import 'package:componentes/styles/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:componentes/routes/app_routes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    // ignore: non_constant_identifier_names
+    final MenuOptions = AppRoutes.menuOptions;
     return Scaffold(
         appBar: AppBar(
-          title: const Text('componentes de flutter'),
-          backgroundColor: colorTema,
-          elevation: 0,
-        ),
+            centerTitle: true,
+            title: const Text('componentes de flutter'),
+            backgroundColor: colorTema),
         body: ListView.separated(
-            itemCount: 10,
+            itemCount: AppRoutes.menuOptions.length,
             separatorBuilder: (context, index) => const Divider(),
             itemBuilder: (context, index) {
               return ListTile(
-                title: Text('iiiiiiiiiiiiiiii'),
-                trailing: const Icon(Icons.arrow_forward),
+                title: Text(MenuOptions[index].name),
+                trailing: Icon(MenuOptions[index].icon),
                 selectedColor: colorTema,
                 onTap: () {
-                  print('object');
+                  // final route = MaterialPageRoute(
+                  //     builder: (context) => const ListView2Screen());
+                  // Navigator.pushReplacement(context, route);
+
+                  Navigator.pushNamed(
+                      context,
+                      MenuOptions[index]
+                          .route); //Para esta navegación se usa el nombre asignado a la ruta
                 },
               );
             }));

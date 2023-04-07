@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'screens/screens.dart';
+import 'routes/app_routes.dart';
 
 void main() => runApp(const MyApp());
 
@@ -12,14 +12,11 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Material app',
-      initialRoute: 'home',
-      routes: {
-        'alert': (BuildContext context) => const AlertScreen(),
-        'card': (BuildContext context) => const CardScreen(),
-        'home': (BuildContext context) => const HomeScreen(),
-        'listView1': (BuildContext context) => const ListView1Screen(),
-        'listView2': (BuildContext context) => const ListView2Screen(),
-      },
+      initialRoute: AppRoutes.initialRoute,
+      routes: AppRoutes.getAppRoutes(),
+      onGenerateRoute: AppRoutes
+          .onGenerateRoute, //Se debe de poner el nombre de la función creada en la ruta 404}
+      theme: ThemeData.light().copyWith(),
     );
   }
 }
