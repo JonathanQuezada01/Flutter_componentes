@@ -1,3 +1,4 @@
+import 'package:componentes/themes/app_themes.dart';
 import 'package:flutter/material.dart';
 
 import 'routes/app_routes.dart';
@@ -10,13 +11,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Material app',
-      initialRoute: AppRoutes.initialRoute,
-      routes: AppRoutes.getAppRoutes(),
-      onGenerateRoute: AppRoutes
-          .onGenerateRoute, //Se debe de poner el nombre de la función creada en la ruta 404}
-      theme: ThemeData.light().copyWith(),
-    );
+        debugShowCheckedModeBanner: false,
+        title: 'Material app',
+        initialRoute: AppRoutes.initialRoute,
+        routes: AppRoutes.getAppRoutes(),
+        onGenerateRoute: AppRoutes
+            .onGenerateRoute, //Se debe de poner el nombre de la función creada en la ruta 404}
+        theme: AppTheme.lightTeme);
   }
 }
