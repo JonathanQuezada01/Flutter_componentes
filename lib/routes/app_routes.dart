@@ -6,7 +6,7 @@ import 'package:componentes/screens/screens.dart';
 class AppRoutes {
   static const initialRoute = 'home';
 
-  //Creacion de las rutas de las opciones del menu (argumentos)
+  //Creación de las rutas de las opciones del menu (argumentos)
   static final menuOptions = <MenuOption>[
     MenuOption(
         route: 'home',
@@ -35,6 +35,7 @@ class AppRoutes {
         icon: Icons.format_list_bulleted),
   ];
 
+  //función que envía la lista de rutas
   static Map<String, Widget Function(BuildContext)> getAppRoutes() {
     Map<String, Widget Function(BuildContext)> appRoutes = {};
     for (final option in menuOptions) {
