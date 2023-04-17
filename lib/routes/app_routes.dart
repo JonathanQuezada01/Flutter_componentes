@@ -1,6 +1,6 @@
-import 'package:componentes/models/menu_option.dart';
 import 'package:flutter/material.dart';
 
+import 'package:componentes/models/menu_option.dart';
 import 'package:componentes/screens/screens.dart';
 
 class AppRoutes {
@@ -33,6 +33,11 @@ class AppRoutes {
         name: 'List View2',
         screen: const ListView2Screen(),
         icon: Icons.format_list_bulleted),
+    MenuOption(
+        route: 'Avatar',
+        name: 'Avatar',
+        screen: const AvatarScreen(),
+        icon: Icons.person_outline)
   ];
 
   //función que envía la lista de rutas
