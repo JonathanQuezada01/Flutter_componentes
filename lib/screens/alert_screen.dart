@@ -67,8 +67,8 @@ class AlertScreen extends StatelessWidget {
     return Scaffold(
       body: Center(
           child: ElevatedButton(
-              //La siguiente funcion esta al revez( la puse para ver lo de cuppetino )
-              onPressed: () => Platform.isAndroid
+              //La siguiente función esta al revez( la puse para ver lo de cupertino )
+              onPressed: () => !Platform.isAndroid
                   ? displayDialogIos(context)
                   : displayDialogAndroid(context),
               child: const Padding(
@@ -80,7 +80,8 @@ class AlertScreen extends StatelessWidget {
                         color: Colors.black)),
               ))),
       floatingActionButton: FloatingActionButton(
-          child: const Icon(Icons.close), onPressed: () {}),
+          child: const Icon(Icons.close),
+          onPressed: () => Navigator.pop(context)),
     );
   }
 }

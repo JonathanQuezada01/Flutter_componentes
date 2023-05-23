@@ -30,6 +30,7 @@ class ListView2Screen extends StatelessWidget {
                 title: Text(options[i]),
                 trailing: const Icon(Icons.arrow_forward),
                 onTap: () {
+                  // ignore: avoid_print
                   print(options[i]);
                 },
               );
