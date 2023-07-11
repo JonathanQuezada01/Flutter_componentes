@@ -23,12 +23,7 @@ class CardScreen extends StatelessWidget {
               imageUrl:
                   'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEh5nBynFl-UaruEtNgMXMZMlJPion1uTPEA&usqp=CAU',
             ),
-            SizedBox(height: 5),
-            CustomCardType2(
-              imageUrl:
-                  'https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/513vvwBzJfS.jpg',
-            ),
-            SizedBox(height: 5),
+
             CustomCardType2(
               imageUrl:
                   'https://www.rollingstone.com/wp-content/uploads/2019/07/bathwatergamer.jpg',

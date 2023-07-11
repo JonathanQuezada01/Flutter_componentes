@@ -22,7 +22,8 @@ class AppTheme {
         backgroundColor: primaryColor,
         elevation: 5,
       ),
-      //
+      ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+      //tema de los botones flotantes
       //Tema de los botones elevados
       elevatedButtonTheme: ElevatedButtonThemeData(
         style: ElevatedButton.styleFrom(
@@ -31,10 +32,11 @@ class AppTheme {
           elevation: 100,
         ),
       ),
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
       //Tema de los imputs
 
-      //cuando el imput esta habilitado
+      //cuando el input esta habilitado
       inputDecorationTheme: InputDecorationTheme(
         floatingLabelStyle: const TextStyle(color: primaryColor),
         enabledBorder: OutlineInputBorder(
@@ -43,13 +45,13 @@ class AppTheme {
               bottomLeft: Radius.circular(10), topLeft: Radius.circular(10)),
         ),
 
-        //Cuando el input esta desabilitado
+        //Cuando el input esta deshabilitado
         focusedBorder: const OutlineInputBorder(
             borderSide: BorderSide(color: primaryColor),
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.zero, bottomRight: Radius.zero)),
-        //Cuando el input esta habilitado pero lleno
 
+        //Cuando el input esta habilitado pero lleno
         border: const OutlineInputBorder(
             borderRadius: BorderRadius.only(
           bottomLeft: Radius.circular(25),
