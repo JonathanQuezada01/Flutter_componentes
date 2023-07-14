@@ -8,8 +8,8 @@ class InputsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     final myFormKey = GlobalKey<
         FormState>(); //se crea key del formulario para referenciar el formulario
-    /////////////////////////////
-    //////////////////////////////
+
+    ///////////////////////////////////////////////////////////
     final Map<String, String> formValues = {
       'null': 'null',
       'first_name': 'Jonathan',

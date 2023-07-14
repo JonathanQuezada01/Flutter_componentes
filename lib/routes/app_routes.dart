@@ -48,6 +48,11 @@ class AppRoutes {
         name: 'Inputs',
         screen: const InputsScreen(),
         icon: Icons.input_rounded),
+    MenuOption(
+        route: 'Slider',
+        name: 'Slider',
+        screen: const SliderScreen(),
+        icon: Icons.sledding_rounded),
   ];
 
   //función que envía la lista de rutas
