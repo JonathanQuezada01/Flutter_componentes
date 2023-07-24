@@ -12,6 +12,7 @@ class CustomInputField extends StatelessWidget {
   final bool obscuredText;
 
   //////////////////////////////////////////
+  // ignore: prefer_typing_uninitialized_variables
   final formProperty;
   final Map<String, dynamic>
       formValues; //Se crea el mapa de valores del formulario

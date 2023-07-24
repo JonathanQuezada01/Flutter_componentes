@@ -53,6 +53,11 @@ class AppRoutes {
         name: 'Slider',
         screen: const SliderScreen(),
         icon: Icons.sledding_rounded),
+    MenuOption(
+        route: 'List View Builder',
+        name: 'List View Builder',
+        screen: const ListViewBuilderScreen(),
+        icon: Icons.local_bar_sharp)
   ];
 
   //función que envía la lista de rutas

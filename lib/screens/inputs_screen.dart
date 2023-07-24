@@ -41,7 +41,7 @@ class InputsScreen extends StatelessWidget {
 
                 CustomInputField(
                   labelText: 'esto es el label',
-                  hintText: 'Este es el hinttext',
+                  hintText: 'Este es el hintText',
                   helperText: 'Este es el helperText',
                   formProperty: 'null',
                   formValues: formValues,
@@ -122,12 +122,10 @@ class InputsScreen extends StatelessWidget {
                       FocusScope.of(context)
                           .requestFocus(FocusNode()); //Elimina el teclado
 
-                      //! Si el formulario esta vacio no retorna nada
+                      //! Si el formulario esta vació no retorna nada
                       if (!myFormKey.currentState!.validate()) {
-                        print('Formulario no valido');
                         return;
                       }
-                      print(formValues);
                     },
                     child: const SizedBox(
                       width: double.infinity,
